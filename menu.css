@@ -1,0 +1,313 @@
+/* ===== MENU.CSS ===== */
+/* Стили для страницы меню */
+
+/* ----- ЗАГОЛОВОК МЕНЮ ----- */
+.menu-header {
+    text-align: center;
+    padding: 40px 0 30px;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.menu-title {
+    font-size: 48px;
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.menu-subtitle {
+    font-size: 18px;
+    color: var(--gray);
+    letter-spacing: 2px;
+}
+
+.menu-divider {
+    color: var(--gold);
+    letter-spacing: 6px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* ----- КАТЕГОРИИ (ФИЛЬТРЫ) ----- */
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 8px 24px;
+    background: transparent;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    color: var(--gray);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.category-btn.active {
+    background: var(--gold);
+    color: var(--black);
+    border-color: var(--gold);
+}
+
+.category-btn.active:hover {
+    background: var(--gold-dark);
+    border-color: var(--gold-dark);
+}
+
+/* ----- СЕТКА МЕНЮ ----- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 10px 0 30px;
+}
+
+.menu-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(201, 168, 76, 0.08);
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.menu-card:hover {
+    background: rgba(201, 168, 76, 0.05);
+    border-color: rgba(201, 168, 76, 0.25);
+    transform: translateX(4px);
+}
+
+.menu-card-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(201, 168, 76, 0.1);
+    border-radius: 50%;
+}
+
+.menu-card-icon i {
+    font-size: 20px;
+    color: var(--gold);
+}
+
+.menu-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.menu-card-content h3 {
+    color: var(--light);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.menu-card-desc {
+    font-size: 13px;
+    color: var(--gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-card-price {
+    display: block;
+    color: var(--gold);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+/* ----- СКРЫТИЕ ПРИ ФИЛЬТРЕ ----- */
+.menu-card.hidden {
+    display: none;
+}
+
+/* ----- АДАПТИВ ----- */
+@media (max-width: 768px) {
+    .menu-title {
+        font-size: 36px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .menu-card {
+        padding: 14px 16px;
+    }
+
+    .menu-card-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-card-icon i {
+        font-size: 16px;
+    }
+
+    .menu-card-content h3 {
+        font-size: 15px;
+    }
+
+    .menu-card-desc {
+        font-size: 12px;
+    }
+
+    .menu-card-price {
+        font-size: 14px;
+    }
+
+    .category-btn {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+
+    .menu-categories {
+        gap: 6px;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-title {
+        font-size: 28px;
+    }
+
+    .menu-subtitle {
+        font-size: 14px;
+    }
+
+    .menu-card {
+        padding: 12px 14px;
+    }
+
+    .menu-card-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .menu-card-icon i {
+        font-size: 14px;
+    }
+
+    .menu-card-content h3 {
+        font-size: 14px;
+    }
+
+    .category-btn {
+        font-size: 11px;
+        padding: 4px 12px;
+    }
+}
+/* ===== ФОРМА БРОНИРОВАНИЯ ===== */
+.booking-section {
+    padding: 60px 0;
+}
+
+.booking-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--light);
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 8px;
+    color: var(--light);
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--gray);
+}
+
+.form-group select {
+    color: var(--light);
+}
+
+.form-group select option {
+    background: var(--black);
+}
+
+.booking-message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.booking-message.success {
+    color: #2ecc71;
+}
+
+.booking-message.error {
+    color: #e74c3c;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form {
+        padding: 24px 16px;
+    }
+}
