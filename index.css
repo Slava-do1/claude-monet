@@ -15,7 +15,7 @@
     border-radius: 20px;
     padding: 4px 20px;
     font-size: 12px;
-    color: var(--gold);
+    color: var(--gold, #c9a84c);
     letter-spacing: 2px;
     margin-bottom: 16px;
 }
@@ -23,14 +23,14 @@
 .hero h1 {
     font-size: 72px;
     font-weight: 700;
-    color: var(--gold);
+    color: var(--gold, #c9a84c);
     letter-spacing: 8px;
     margin-bottom: 10px;
 }
 
 .hero .subtitle {
     font-size: 20px;
-    color: var(--gray);
+    color: var(--gray, #8a8078);
     letter-spacing: 6px;
     font-weight: 300;
     margin-bottom: 6px;
@@ -40,18 +40,18 @@
     display: flex;
     justify-content: center;
     gap: 12px;
-    color: var(--gold);
+    color: var(--gold, #c9a84c);
     font-size: 18px;
     margin: 16px 0;
 }
 
 .hero .line i {
-    color: var(--gold);
+    color: var(--gold, #c9a84c);
 }
 
 .hero .quote {
     font-size: 18px;
-    color: var(--gray);
+    color: var(--gray, #8a8078);
     font-style: italic;
     letter-spacing: 1px;
     max-width: 600px;
@@ -59,7 +59,7 @@
 }
 
 .hero .quote span {
-    color: var(--gold);
+    color: var(--gold, #c9a84c);
 }
 
 .hero-buttons {
@@ -71,13 +71,13 @@
 
 .btn-outline {
     border-color: rgba(201, 168, 76, 0.4);
-    color: var(--light);
+    color: var(--light, #e8e0d0);
 }
 
 .btn-outline:hover {
     background: rgba(201, 168, 76, 0.1);
-    color: var(--gold);
-    border-color: var(--gold);
+    color: var(--gold, #c9a84c);
+    border-color: var(--gold, #c9a84c);
 }
 
 /* ----- О РЕСТОРАНЕ (КРАТКО) ----- */
@@ -96,12 +96,12 @@
 .about-short-text p {
     font-size: 16px;
     line-height: 1.8;
-    color: var(--gray);
+    color: var(--gray, #8a8078);
     margin-bottom: 16px;
 }
 
 .about-short-text strong {
-    color: var(--gold);
+    color: var(--gold, #c9a84c);
     font-weight: 400;
 }
 
@@ -109,6 +109,7 @@
     margin-right: 8px;
 }
 
+/* ===== КАРТОЧКИ (с ::after, НЕ КЛИКАБЕЛЬНЫЕ) ===== */
 .about-short-features {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -116,29 +117,40 @@
 }
 
 .feature {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(201, 168, 76, 0.1);
-    border-radius: 12px;
-    padding: 24px 16px;
+    background: transparent;
+    border: none;
+    padding: 16px 0 20px;
     text-align: center;
-    transition: all 0.3s ease;
+    position: relative;
+    transition: none;
 }
 
-.feature:hover {
-    background: rgba(201, 168, 76, 0.05);
-    border-color: rgba(201, 168, 76, 0.3);
-    transform: translateY(-4px);
+.feature::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 2px;
+    background: rgba(201, 168, 76, 0.3);
+    transition: width 0.3s ease;
+}
+
+.feature:hover::after {
+    width: 55px;
+    background: rgba(201, 168, 76, 0.6);
 }
 
 .feature i {
     font-size: 28px;
-    color: var(--gold);
+    color: var(--gold, #c9a84c);
     display: block;
     margin-bottom: 8px;
 }
 
 .feature h4 {
-    color: var(--light);
+    color: var(--light, #e8e0d0);
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -146,8 +158,8 @@
 }
 
 .feature p {
-    font-size: 12px;
-    color: var(--gray);
+    font-size: 13px;
+    color: var(--gray, #8a8078);
 }
 
 /* ----- ПОПУЛЯРНЫЕ БЛЮДА ----- */
@@ -178,13 +190,13 @@
 
 .popular-icon i {
     font-size: 36px;
-    color: var(--gold);
+    color: var(--gold, #c9a84c);
     display: block;
     margin-bottom: 12px;
 }
 
 .popular-item h3 {
-    color: var(--light);
+    color: var(--light, #e8e0d0);
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -193,12 +205,12 @@
 
 .popular-item p {
     font-size: 13px;
-    color: var(--gray);
+    color: var(--gray, #8a8078);
     margin-bottom: 10px;
 }
 
 .popular-item .price {
-    color: var(--gold);
+    color: var(--gold, #c9a84c);
     font-size: 18px;
     font-weight: 400;
 }
