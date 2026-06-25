@@ -1,122 +1,122 @@
-/* ===== INDEX.CSS ===== */
-/* Стили для главной страницы */
+/* ===== ABOUT.CSS ===== */
+/* Стили для страницы "О ресторане" */
 
-/* ----- ГЕРОЙ ----- */
-.hero {
+/* ----- ЗАГОЛОВОК СТРАНИЦЫ ----- */
+.page-header {
     text-align: center;
-    padding: 60px 0 50px;
-    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-}
-
-.hero-badge {
-    display: inline-block;
-    background: rgba(201, 168, 76, 0.15);
-    border: 1px solid rgba(201, 168, 76, 0.3);
-    border-radius: 20px;
-    padding: 4px 20px;
-    font-size: 12px;
-    color: var(--gold, #c9a84c);
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-}
-
-.hero h1 {
-    font-size: 72px;
-    font-weight: 700;
-    color: var(--gold, #c9a84c);
-    letter-spacing: 8px;
-    margin-bottom: 10px;
-}
-
-.hero .subtitle {
-    font-size: 20px;
-    color: var(--gray, #8a8078);
-    letter-spacing: 6px;
-    font-weight: 300;
-    margin-bottom: 6px;
-}
-
-.hero .line {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    color: var(--gold, #c9a84c);
-    font-size: 18px;
-    margin: 16px 0;
-}
-
-.hero .line i {
-    color: var(--gold, #c9a84c);
-}
-
-.hero .quote {
-    font-size: 18px;
-    color: var(--gray, #8a8078);
-    font-style: italic;
-    letter-spacing: 1px;
-    max-width: 600px;
-    margin: 0 auto 24px;
-}
-
-.hero .quote span {
-    color: var(--gold, #c9a84c);
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.btn-outline {
-    border-color: rgba(201, 168, 76, 0.4);
-    color: var(--light, #e8e0d0);
-}
-
-.btn-outline:hover {
-    background: rgba(201, 168, 76, 0.1);
-    color: var(--gold, #c9a84c);
-    border-color: var(--gold, #c9a84c);
-}
-
-/* ----- О РЕСТОРАНЕ (КРАТКО) ----- */
-.about-short {
-    padding: 60px 0;
+    padding: 40px 0 30px;
     border-bottom: 1px solid rgba(201, 168, 76, 0.1);
 }
 
-.about-short-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+.page-title {
+    font-size: 48px;
+    color: var(--gold, #c9a84c);
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin-bottom: 8px;
 }
 
-.about-short-text p {
+.page-subtitle {
+    font-size: 18px;
+    color: var(--gray, #8a8078);
+    letter-spacing: 2px;
+}
+
+.page-divider {
+    color: var(--gold, #c9a84c);
+    letter-spacing: 6px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* ----- ИСТОРИЯ ----- */
+.history {
+    padding: 50px 0;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.history-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.history-content p {
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.9;
     color: var(--gray, #8a8078);
     margin-bottom: 16px;
+    text-align: center;
 }
 
-.about-short-text strong {
+.history-content strong {
     color: var(--gold, #c9a84c);
     font-weight: 400;
 }
 
-.about-short-text i {
-    margin-right: 8px;
+.history-content .fa-quote-left,
+.history-content .fa-quote-right {
+    font-size: 14px;
 }
 
-/* ----- КАРТОЧКИ (НЕ КЛИКАБЕЛЬНЫЕ) ----- */
-.about-short-features {
+/* ----- ВЛАДЕЛЕЦ ----- */
+.owner {
+    padding: 50px 0;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.owner-block {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.owner-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(201, 168, 76, 0.1);
+    border: 2px solid var(--gold, #c9a84c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.owner-avatar i {
+    font-size: 48px;
+    color: var(--gold, #c9a84c);
+}
+
+.owner-block h3 {
+    color: var(--gold, #c9a84c);
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.owner-role {
+    color: var(--gray, #8a8078);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.owner-quote {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--light, #e8e0d0);
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 24px;
+}
+
+/* ===== СТАТИСТИКА (НЕ КЛИКАБЕЛЬНАЯ) ===== */
+.owner-stats {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.feature {
+.stat {
     background: transparent;
     border: none;
     border-bottom: 2px solid rgba(201, 168, 76, 0.3);
@@ -126,134 +126,226 @@
     transition: none;
 }
 
-.feature:hover {
+.stat:hover {
     transform: none;
     background: none;
-    border-bottom-color: rgba(201, 168, 76, 0.3);
 }
 
-.feature:active {
-    transform: none;
-}
-
-.feature i {
+.stat-number {
+    display: block;
     font-size: 28px;
+    color: var(--gold, #c9a84c);
+    font-weight: 400;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--gray, #8a8078);
+}
+
+/* ----- ШЕФ-ПОВАР ----- */
+.chef {
+    padding: 50px 0;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.chef-block {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.chef-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(201, 168, 76, 0.1);
+    border: 2px solid var(--gold, #c9a84c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.chef-avatar i {
+    font-size: 48px;
+    color: var(--gold, #c9a84c);
+}
+
+.chef-block h3 {
+    color: var(--gold, #c9a84c);
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.chef-role {
+    color: var(--gray, #8a8078);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.chef-quote {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--light, #e8e0d0);
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 24px;
+}
+
+/* ===== ФИЛОСОФИЯ ШЕФА (НЕ КЛИКАБЕЛЬНАЯ) ===== */
+.chef-philosophy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.philosophy-item {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(201, 168, 76, 0.3);
+    border-radius: 0;
+    padding: 16px 0;
+    text-align: center;
+    transition: none;
+}
+
+.philosophy-item:hover {
+    transform: none;
+    background: none;
+}
+
+.philosophy-item i {
+    font-size: 24px;
     color: var(--gold, #c9a84c);
     display: block;
     margin-bottom: 8px;
 }
 
-.feature h4 {
-    color: var(--light, #e8e0d0);
+.philosophy-item span {
     font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-}
-
-.feature p {
-    font-size: 13px;
     color: var(--gray, #8a8078);
 }
 
-/* ----- ПОПУЛЯРНЫЕ БЛЮДА ----- */
-.popular {
-    padding: 60px 0;
+/* ----- ИНТЕРЬЕР ----- */
+.interior {
+    padding: 50px 0;
 }
 
-.popular-grid {
+/* ===== ИНТЕРЬЕР (НЕ КЛИКАБЕЛЬНЫЙ) ===== */
+.interior-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.popular-item {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(201, 168, 76, 0.1);
-    border-radius: 12px;
-    padding: 30px 20px;
+.interior-card {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(201, 168, 76, 0.3);
+    border-radius: 0;
+    padding: 16px 0;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: none;
 }
 
-.popular-item:hover {
-    background: rgba(201, 168, 76, 0.05);
-    border-color: rgba(201, 168, 76, 0.3);
-    transform: translateY(-4px);
+.interior-card:hover {
+    transform: none;
+    background: none;
+    border-bottom-color: rgba(201, 168, 76, 0.3);
 }
 
-.popular-icon i {
+.interior-card:active {
+    transform: none;
+}
+
+.interior-card i {
     font-size: 36px;
     color: var(--gold, #c9a84c);
     display: block;
     margin-bottom: 12px;
 }
 
-.popular-item h3 {
+.interior-card h3 {
     color: var(--light, #e8e0d0);
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 1px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
-.popular-item p {
-    font-size: 13px;
+.interior-card p {
+    font-size: 14px;
     color: var(--gray, #8a8078);
-    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
-.popular-item .price {
-    color: var(--gold, #c9a84c);
-    font-size: 18px;
-    font-weight: 400;
+/* ----- КНОПКА БРОНИРОВАНИЯ ----- */
+.btn-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 /* ----- АДАПТИВ ----- */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 40px;
-        letter-spacing: 4px;
+    .page-title {
+        font-size: 36px;
     }
 
-    .hero .subtitle {
-        font-size: 16px;
-        letter-spacing: 3px;
-    }
-
-    .about-short-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-short-features {
+    .owner-stats,
+    .chef-philosophy {
         grid-template-columns: 1fr 1fr;
     }
 
-    .popular-grid {
+    .interior-grid {
         grid-template-columns: 1fr 1fr;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+    .history-content p {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .owner-quote,
+    .chef-quote {
+        font-size: 15px;
+        text-align: left;
     }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 32px;
-        letter-spacing: 2px;
+    .page-title {
+        font-size: 28px;
     }
 
-    .about-short-features {
+    .page-subtitle {
+        font-size: 14px;
+    }
+
+    .owner-stats,
+    .chef-philosophy {
         grid-template-columns: 1fr;
     }
 
-    .popular-grid {
+    .interior-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero .quote {
-        font-size: 15px;
+    .owner-block h3,
+    .chef-block h3 {
+        font-size: 22px;
+    }
+
+    .owner-avatar,
+    .chef-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .owner-avatar i,
+    .chef-avatar i {
+        font-size: 36px;
     }
 }
