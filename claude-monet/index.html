@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claude Monet | Французский ресторан</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+    <!-- ===== ТУЛБАР ===== -->
+    <div class="toolbar">
+        <a href="index.html" class="logo">
+            <i class="fas fa-crown"></i> CLAUDE MONET <span>| PARIS</span>
+        </a>
+        <div class="nav">
+            <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+            <a href="menu.html"><i class="fas fa-utensils"></i> Меню</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> О ресторане</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- ===== ГЕРОЙ ===== -->
+        <div class="hero fade-section">
+            <div class="hero-badge">★ Michelin 2026</div>
+            <h1>CLAUDE MONET</h1>
+            <p class="subtitle">Французский ресторан в Москве</p>
+            <div class="line">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="quote">«Здесь работают <span>лучшие повара Москвы</span>»</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn"><i class="fas fa-utensils"></i> Наше меню</a>
+                <a href="#about-short" class="btn btn-outline"><i class="fas fa-arrow-down"></i> Узнать больше</a>
+            </div>
+        </div>
+
+        <!-- ===== КРАТКО О РЕСТОРАНЕ ===== -->
+        <section id="about-short" class="about-short fade-section">
+            <h2 class="section-title">Добро пожаловать</h2>
+            <div class="about-short-grid">
+                <div class="about-short-text">
+                    <p>
+                        <i class="fas fa-flag" style="color: var(--gold);"></i>
+                        <strong>Claude Monet</strong> — это ресторан, где французская кулинарная традиция
+                        встречается с московским ритмом жизни. Изысканные блюда, безупречный сервис
+                        и атмосфера парижского шика.
+                    </p>
+                    <p>
+                        <i class="fas fa-user-tie" style="color: var(--gold);"></i>
+                        Владелец ресторана — <strong>Дмитрий Нагиев</strong>. Шеф-повар —
+                        <strong>Виктор Баринов</strong>.
+                    </p>
+                    <a href="about.html" class="btn" style="margin-top: 16px;">
+                        <i class="fas fa-info-circle"></i> Подробнее о нас
+                    </a>
+                </div>
+                <div class="about-short-features">
+                    <div class="feature">
+                        <i class="fas fa-crown"></i>
+                        <h4>Статус</h4>
+                        <p>Один из лучших ресторанов Москвы</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Кухня</h4>
+                        <p>Французская классика</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-wine-glass-alt"></i>
+                        <h4>Винная карта</h4>
+                        <p>Более 200 позиций</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ПОПУЛЯРНЫЕ БЛЮДА ===== -->
+        <section class="popular fade-section">
+            <h2 class="section-title">Популярные блюда</h2>
+            <div class="popular-grid">
+                <div class="popular-item">
+                    <div class="popular-icon"><i class="fas fa-drumstick-bite"></i></div>
+                    <h3>Утка по-парижски</h3>
+                    <p>С соусом из мёда и апельсина</p>
+                    <span class="price">3 200 ₽</span>
+                </div>
+                <div class="popular-item">
+                    <div class="popular-icon"><i class="fas fa-cake"></i></div>
+                    <h3>Крем-брюле</h3>
+                    <p>Классический французский десерт</p>
+                    <span class="price">1 000 ₽</span>
+                </div>
+                <div class="popular-item">
+                    <div class="popular-icon"><i class="fas fa-wine-glass-alt"></i></div>
+                    <h3>Фуа-гра</h3>
+                    <p>С фиговым конфитюром</p>
+                    <span class="price">3 800 ₽</span>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="menu.html" class="btn"><i class="fas fa-book-open"></i> Смотреть всё меню</a>
+            </div>
+        </section>
+
+        <!-- ===== ВЫПЛЫВАЮЩЕЕ МЕНЮ КОНТАКТОВ ===== -->
+        <div class="floating-menu">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-phone"></i>
+            </button>
+            <div class="menu-content" id="menuContent">
+                <div class="menu-item">
+                    <a href="tel:+74991234567" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span class="contact-text">+7 (499) 123-45-67</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="mailto:info@claudemonet.ru" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span class="contact-text">info@claudemonet.ru</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="contact-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="contact-text">Москва, ул. Тверская, 15</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="contact-link">
+                        <i class="fas fa-clock"></i>
+                        <span class="contact-text">Ежедневно 12:00 — 23:00</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="contact-link">
+                        <i class="fas fa-subway"></i>
+                        <span class="contact-text">Метро «Тверская»</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ФУТЕР ===== -->
+        <div class="footer">
+            <p><i class="fas fa-crown"></i> © 2026 <span>Claude Monet</span> — Французский ресторан в Москве</p>
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+<script src="common.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
